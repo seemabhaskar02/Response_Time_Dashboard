@@ -10,13 +10,13 @@ st.set_page_config(layout="wide")
 #st.title("Event Response time Analysis")
 st.markdown("<h1 style='text-align: center; color: white;'>Event Response time Analysis</h1>", unsafe_allow_html=True)
 st.sidebar.title("Event Response time Analysis")
-df1=pd.read_excel("response_sep.xlsx")
-df2=pd.read_excel("response_oct.xlsx")
-df3=pd.read_excel("response_nov.xlsx")
-df4=pd.read_excel("response_dec.xlsx")
+df1=pd.read_csv("response_sep.csv")
+df2=pd.read_csv("response_oct.csv")
+df3=pd.read_csv("response_nov.csv")
+df4=pd.read_csv("response_dec.csv")
 @st.cache_data(persist=True)
 def load_data():
-    data = read_excel(df1)
+    data = read_csv(df1)
     #data['tweet_created'] = pd.to_datetime(data['tweet_created'])
     return data
 
