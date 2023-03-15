@@ -12,8 +12,8 @@ st.markdown("<h1 style='text-align: center; color: white;'>Event Response time A
 st.sidebar.title("Event Response time Analysis")
 @st.cache_data(persist=True)
 def load_data():
-    data = pd.read_csv(DATA_URL)
-    data['tweet_created'] = pd.to_datetime(data['tweet_created'])
+    data = pd.read_csv(df1)
+    #data['tweet_created'] = pd.to_datetime(data['tweet_created'])
     return data
 
 data = load_data()        
