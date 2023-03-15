@@ -15,12 +15,12 @@ df2=pd.read_csv("response_oct.csv")
 df3=pd.read_csv("response_nov.csv")
 df4=pd.read_csv("response_dec.csv")
 @st.cache_data(persist=True)
-def load_data():
+def load_data(df1):
     data = pd.read_csv(df1)
     #data['tweet_created'] = pd.to_datetime(data['tweet_created'])
     return data
 
-data = load_data()        
+data = load_data(df1)        
 
 #col1, col2 = st.columns(2)
 col1, padding, col2 = st.columns((10,2,10))  
