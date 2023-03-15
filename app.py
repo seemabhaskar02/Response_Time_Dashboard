@@ -8,7 +8,7 @@ import numpy as np
 st.set_page_config(layout="wide")
 
 #st.title("Event Response time Analysis")
-st.markdown("<h1 style='text-align: center; color: white;'>Event Response time Analysis</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Event Response time Analysis</h1>", unsafe_allow_html=True)
 st.sidebar.title("Event Response time Analysis")
 df1=pd.read_csv("response_sep.csv")
 df2=pd.read_csv("response_oct.csv")
