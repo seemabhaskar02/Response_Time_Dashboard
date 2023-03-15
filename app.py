@@ -16,7 +16,7 @@ df3=pd.read_excel("response_nov.xlsx")
 df4=pd.read_excel("response_dec.xlsx")
 @st.cache_data(persist=True)
 def load_data():
-    data = pd.read_csv(df1)
+    data = read_excel(df1)
     #data['tweet_created'] = pd.to_datetime(data['tweet_created'])
     return data
 
