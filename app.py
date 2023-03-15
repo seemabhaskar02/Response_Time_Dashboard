@@ -10,6 +10,10 @@ st.set_page_config(layout="wide")
 #st.title("Event Response time Analysis")
 st.markdown("<h1 style='text-align: center; color: white;'>Event Response time Analysis</h1>", unsafe_allow_html=True)
 st.sidebar.title("Event Response time Analysis")
+df1=pd.read_excel("response_sep.xlsx")
+df2=pd.read_excel("response_oct.xlsx")
+df3=pd.read_excel("response_nov.xlsx")
+df4=pd.read_excel("response_dec.xlsx")
 @st.cache_data(persist=True)
 def load_data():
     data = pd.read_csv(df1)
@@ -21,10 +25,7 @@ data = load_data()
 #col1, col2 = st.columns(2)
 col1, padding, col2 = st.columns((10,2,10))  
 
-df1=pd.read_excel("/home/seema/Downloads/Interactive-Dashboards-With-Streamlit-master/response_sep.xlsx")
-df2=pd.read_excel("/home/seema/Downloads/Interactive-Dashboards-With-Streamlit-master/response_oct.xlsx")
-df3=pd.read_excel("/home/seema/Downloads/Interactive-Dashboards-With-Streamlit-master/response_nov.xlsx")
-df4=pd.read_excel("/home/seema/Downloads/Interactive-Dashboards-With-Streamlit-master/response_dec.xlsx")
+
 
 st.sidebar.markdown("### Select  Month to Display")     
 select = st.sidebar.selectbox('Months', ['September', 'October', 'November', 'December'], key='1')
